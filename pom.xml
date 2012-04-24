@@ -53,12 +53,5 @@ http://www.gnu.org/licenses/old-licenses/lgpl-2.1.txt.
      </license>
    </licenses>
 
-   <distributionManagement>
-      <site>
-         <id>site</id>
-         <name>project website</name>
-         <url>scp://local.company.com/websites/project.company.com/</url>
-      </site>
-   </distributionManagement>
 </project>
 
