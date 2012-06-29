@@ -1,59 +1,95 @@
 <project>
-   <modelVersion>4.0.0</modelVersion>
-   <groupId>com.twmacinta</groupId>
-   <artifactId>fast-md5</artifactId>
-   <version>2.6</version>
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>com.twmacinta</groupId>
+  <artifactId>fast-md5</artifactId>
+  <version>2.6</version>
 
 
-   <packaging>jar</packaging>
-   <name>fast-md5</name>
-   <description>Fast MD5 Implementation in Java(TM)</description>
-   <url>http://www.twmacinta.com/myjava/fast_md5.php</url>
+  <packaging>jar</packaging>
+  <name>fast-md5</name>
+  <description>Fast MD5 Implementation in Java(TM)</description>
+  <url>http://www.twmacinta.com/myjava/fast_md5.php</url>
 
-   <parent>
-     <groupId>org.sonatype.oss</groupId>
-     <artifactId>oss-parent</artifactId>
-     <version>7</version>
-    </parent>
+  <licenses>
+    <license>
+      <name>LGPL 2.1 license</name>
+      <url>http://www.opensource.org/licenses/lgpl-2.1.php</url>
+    </license>
+  </licenses>
+
+  <parent>
+    <groupId>org.sonatype.oss</groupId>
+    <artifactId>oss-parent</artifactId>
+    <version>7</version>
+   </parent>
    
-   <build>
-      <sourceDirectory>src</sourceDirectory>
-      <pluginManagement>
-         <plugins>
-           <plugin>
-             <groupId>org.apache.maven.plugins</groupId>
-             <artifactId>maven-compiler-plugin</artifactId>
-             <version>2.3.2</version>
-             <configuration>
-               <source>1.4</source>
-               <target>1.4</target>
-             </configuration>
-           </plugin>
-         </plugins>
-      </pluginManagement>
-   </build>
-   <dependencyManagement>
-   </dependencyManagement>
+  <build>
+    <sourceDirectory>src</sourceDirectory>
+      <plugins>
+        <plugin>
+          <groupId>org.apache.maven.plugins</groupId>
+          <artifactId>maven-compiler-plugin</artifactId>
+          <version>2.3.2</version>
+          <configuration>
+            <source>1.4</source>
+            <target>1.4</target>
+          </configuration>
+        </plugin>
 
-   <reporting>
-   </reporting>
+        <plugin>
+          <groupId>org.apache.maven.plugins</groupId>
+          <artifactId>maven-source-plugin</artifactId>
+         <executions>
+           <execution>
+           <id>attach-sources</id>
+           <goals>
+             <goal>jar</goal>
+           </goals>
+         </execution>
+        </executions>
+      </plugin>
 
-   <developers>
-     <developer>
-       <id>tim</id>
-       <name>Timothy W Macinta</name>
-       <email></email>
-       <roles>
+     <plugin>
+      <groupId>org.apache.maven.plugins</groupId>
+      <artifactId>maven-javadoc-plugin</artifactId>
+      <executions>
+        <execution>
+        <id>attach-javadocs</id>
+          <goals>
+            <goal>jar</goal>
+          </goals>
+          </execution>
+        </executions>
+      </plugin>
+    </plugins>
+    <pluginManagement>
+    </pluginManagement>
+  </build>
+  <dependencyManagement>
+  </dependencyManagement>
+
+  <developers>
+    <developer>
+      <id>tim</id>
+      <name>Timothy W Macinta</name>
+      <email></email>
+      <roles>
          <role>developer</role>
-       </roles>
-     </developer>
-   </developers>
+      </roles>
+    </developer>
+  </developers>
 
-   <licenses>
-     <license>
-       <name>GNU General Lesser Public License (LGPL) version 2.1</name>
-       <url>http://www.gnu.org/licenses/lgpl-2.1.html</url>
-       <comments>
+  <scm>
+    <connection>scm:git:git@github.com:simpsonjulian/fast-md5.git</connection>
+    <developerConnection>scm:git:git@github.com:simpsonjulian/fast-md5.git</developerConnection>
+    <url>https://github.com/simpsonjulian/fast-md5</url>
+  </scm>
+
+  <licenses>
+    <license>
+      <name>GNU General Lesser Public License (LGPL) version 2.1</name>
+      <url>http://www.gnu.org/licenses/lgpl-2.1.html</url>
+      <comments>
 This program is free software: you can redistribute it and/or modify
 it under the terms of the GNU Lesser General Public License as 
 published by the Free Software Foundation, either version 2.1 of the 
@@ -67,9 +103,8 @@ GNU General Lesser Public License for more details.
 You should have received a copy of the GNU General Lesser Public 
 License along with this program.  If not, see
 http://www.gnu.org/licenses/old-licenses/lgpl-2.1.txt.
-       </comments>
-     </license>
-   </licenses>
+      </comments>
+    </license>
+  </licenses>
 
 </project>
-
